@@ -1,0 +1,106 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-serif: "Playfair Display", ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
+  
+  --color-gold: #C5A880;
+  --color-gold-light: #D4BD9B;
+  --color-gold-dark: #A48B69;
+  --color-charcoal: #0a0a0a;
+  --color-charcoal-light: #141414;
+  --color-charcoal-border: #1f1f1f;
+  --color-ivory: #F9F8F6;
+  --color-bone: #E8E5E1;
+  --color-muted: #8C8C8C;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    background-color: var(--color-charcoal);
+  }
+  
+  body {
+    @apply bg-charcoal text-ivory antialiased overflow-x-hidden;
+  }
+}
+
+@layer utilities {
+  .hidden-scrollbar, .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  .hidden-scrollbar::-webkit-scrollbar, .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+
+  .snap-x-mandatory {
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+  }
+  .snap-start {
+    scroll-snap-align: start;
+  }
+  .snap-center {
+    scroll-snap-align: center;
+  }
+  
+  .animate-bounce-slow {
+    animation: bounce-slow 4s ease-in-out infinite;
+  }
+
+  .ease-lux {
+    transition-timing-function: cubic-bezier(0.22, 1, 0.36, 1);
+  }
+}
+
+@keyframes bounce-slow {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+/* Custom Minimal Scrollbar */
+::-webkit-scrollbar {
+  width: 4px;
+}
+::-webkit-scrollbar-track {
+  background: var(--color-charcoal);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--color-charcoal-border);
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-gold);
+}
+
+/* Swiper overrides */
+:root {
+  --swiper-theme-color: var(--color-gold);
+  --swiper-pagination-bullet-inactive-color: var(--color-muted);
+  --swiper-pagination-bullet-inactive-opacity: 0.5;
+}
+
+.swiper-pagination-bullet {
+  width: 4px !important;
+  height: 4px !important;
+  transition: all 0.3s ease !important;
+}
+
+.swiper-pagination-bullet-active {
+  width: 14px !important;
+  border-radius: 4px !important;
+}
+
+.mobile-dossier-swiper .swiper-pagination {
+  bottom: 2px !important;
+}
+
+.mobile-dossier-swiper .swiper-slide {
+  padding-bottom: 8px; /* Room for dots */
+}

@@ -1,0 +1,6 @@
+{
+  "name": "Gogia Group - Luxury Real Estate",
+  "description": "South Delhi's most trusted property group specializing in builder floors, farmhouses, and golf course residences.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
