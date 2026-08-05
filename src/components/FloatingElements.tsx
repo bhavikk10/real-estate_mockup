@@ -39,7 +39,7 @@ export function FloatingElements() {
         
         {/* Large Always Visible WhatsApp Floating Button (Desktop Only) */}
         <a 
-          href="https://wa.me/919810098765?text=Hello%20Gogia%20Group,%20I%20am%20interested%20in%20learning%20more%20about%20your%20South%20Delhi%20properties."
+          href="https://wa.me/91XXXXXXXXXX?text=Hello%20Gogia%20Group,%20I%20am%20interested%20in%20learning%20more%20about%20your%20South%20Delhi%20properties."
           target="_blank"
           rel="noopener noreferrer"
           className="group relative flex items-center justify-center w-16 h-16 bg-[#25D366] text-white hover:bg-[#20ba5a] transition-all duration-300 shadow-[0_8px_30px_rgba(37,211,102,0.4)] rounded-full hover:scale-105 active:scale-95"
@@ -57,7 +57,7 @@ export function FloatingElements() {
       <div className="sm:hidden fixed right-0 top-1/2 -translate-y-1/2 z-50 flex flex-col gap-2 p-1.5 bg-[#0F0F0F]/90 border-l border-y border-white/20 rounded-l-xl shadow-[0_4px_25px_rgba(0,0,0,0.8)] backdrop-blur-md">
         {/* Call Button */}
         <a 
-          href="tel:+919810098765"
+          href="tel:+91XXXXXXXXXX"
           className="w-10 h-10 rounded-lg bg-black/40 border border-gold/50 flex items-center justify-center text-gold active:scale-90 transition-transform shadow-md"
           aria-label="Call Gogia Group"
         >
@@ -66,7 +66,7 @@ export function FloatingElements() {
 
         {/* WhatsApp Button */}
         <a 
-          href="https://wa.me/919810098765?text=Hello%20Gogia%20Group,%20I%20would%20like%20to%20inquire%20about%20your%20properties."
+          href="https://wa.me/91XXXXXXXXXX?text=Hello%20Gogia%20Group,%20I%20would%20like%20to%20inquire%20about%20your%20properties."
           target="_blank"
           rel="noopener noreferrer"
           className="w-10 h-10 rounded-lg bg-black/40 border border-[#25D366]/60 flex items-center justify-center text-[#25D366] active:scale-90 transition-transform shadow-md"

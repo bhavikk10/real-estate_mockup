@@ -218,7 +218,7 @@ export function Hero({ onOpenModal }: { onOpenModal?: (property: any) => void })
               Builder Floors · Farmhouses · Golf Course Residences
             </p>
 
-            <div className="flex flex-col gap-3 w-full mb-6">
+            <div className="flex flex-col gap-3 w-full mb-6 mt-7">
               <a 
                 href="#properties" 
                 className="w-full h-[52px] bg-white text-black font-sans font-bold text-xs uppercase tracking-[0.2em] flex items-center justify-center active:bg-gray-200 transition-colors rounded-[2px]"

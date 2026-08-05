@@ -114,18 +114,18 @@ export function Contact() {
 
               <div className="flex flex-col gap-3 sm:gap-4">
                 <a 
-                  href="tel:+919810098765"
+                  href="tel:+91XXXXXXXXXX"
                   className="w-full bg-ivory text-charcoal py-3 sm:py-4 px-4 sm:px-6 text-[10px] sm:text-xs font-bold uppercase tracking-[0.2em] flex items-center justify-between hover:bg-gold transition-colors duration-300 rounded-[2px]"
                 >
                   <span className="flex items-center gap-2.5 sm:gap-3">
                     <Phone size={14} className="text-charcoal sm:w-4 sm:h-4" />
-                    Call +91 98100 98765
+                    Call +91 XXXXX XXXXX
                   </span>
                   <ArrowRight size={14} />
                 </a>
 
                 <a 
-                  href="https://wa.me/919810098765?text=Hello%20Gogia%20Group,%20I%20would%20like%20to%20inquire%20about%20your%20properties."
+                  href="https://wa.me/91XXXXXXXXXX?text=Hello%20Gogia%20Group,%20I%20would%20like%20to%20inquire%20about%20your%20properties."
                   target="_blank"
                   rel="noopener noreferrer"
                   className="w-full bg-[#25D366] text-white py-3 sm:py-4 px-4 sm:px-6 text-[10px] sm:text-xs font-bold uppercase tracking-[0.2em] flex items-center justify-between hover:bg-[#20ba5a] transition-colors duration-300 rounded-[2px] shadow-lg"
@@ -145,8 +145,8 @@ export function Contact() {
                   <MapPin className="text-gold shrink-0 mt-0.5 sm:mt-1" size={18} />
                   <div>
                     <div className="text-[10px] sm:text-xs uppercase font-sans tracking-widest text-gold font-semibold mb-0.5 sm:mb-1">Corporate Office</div>
-                    <div className="text-ivory font-serif text-base sm:text-lg leading-snug">M-11, Greater Kailash Part 1</div>
-                    <div className="text-bone/70 text-[11px] sm:text-xs font-sans mt-0.5 sm:mt-1">New Delhi - 110048</div>
+                    <div className="text-ivory font-serif text-base sm:text-lg leading-snug">Prime Location, South Delhi</div>
+                    <div className="text-bone/70 text-[11px] sm:text-xs font-sans mt-0.5 sm:mt-1">New Delhi - 1100XX</div>
                   </div>
                 </div>
 
@@ -154,7 +154,7 @@ export function Contact() {
                   <Mail className="text-gold shrink-0 mt-0.5 sm:mt-1" size={18} />
                   <div>
                     <div className="text-[10px] sm:text-xs uppercase font-sans tracking-widest text-gold font-semibold mb-0.5 sm:mb-1">Email Inquiry</div>
-                    <div className="text-ivory font-serif text-sm sm:text-base">gogiagroup@gmail.com</div>
+                    <div className="text-ivory font-serif text-sm sm:text-base">info@gogiagroup.com</div>
                     <div className="text-bone/70 text-[11px] sm:text-xs font-sans mt-0.5">Mon - Sat, 10:00 AM - 7:30 PM</div>
                   </div>
                 </div>

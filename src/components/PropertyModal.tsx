@@ -28,22 +28,23 @@ export function PropertyModal({ property, onClose }: { property: any, onClose: (
         
         {/* Modal / Bottom Sheet Content */}
         <motion.div 
-          className="relative z-10 w-full h-[92vh] md:h-full mt-auto md:mt-0 bg-charcoal-light md:shadow-2xl flex flex-col md:flex-row overflow-hidden md:border border-white/10 rounded-t-3xl md:rounded-none"
+          className="relative z-10 w-full h-[92vh] md:h-full mt-auto md:mt-0 bg-charcoal-light md:shadow-2xl flex flex-col md:flex-row overflow-hidden md:border border-white/10 rounded-t-3xl md:rounded-none will-change-transform transform-gpu"
           initial={{ opacity: 0, y: "100%" }}
           animate={{ opacity: 1, y: 0 }}
           exit={{ opacity: 0, y: "100%" }}
-          transition={{ duration: 0.4, ease: [0.22, 1, 0.36, 1] }}
-          drag={typeof window !== 'undefined' && window.innerWidth < 768 ? "y" : false}
-          dragConstraints={{ top: 0, bottom: 0 }}
-          dragElastic={{ top: 0, bottom: 0.8 }}
+          transition={{ type: "spring", damping: 28, stiffness: 320, mass: 0.8 }}
+          drag="y"
+          dragConstraints={{ top: 0 }}
+          dragElastic={0.15}
+          dragSnapToOrigin={true}
           onDragEnd={(e, info) => {
-            if (info.offset.y > 100 || info.velocity.y > 400) {
+            if (info.offset.y > 80 || info.velocity.y > 300) {
               onClose();
             }
           }}
         >
-          {/* Mobile Top Drag Handle Pill (4x40px) */}
-          <div className="w-10 h-1 bg-gray-400 rounded-full mx-auto my-3 shrink-0 md:hidden z-50"></div>
+          {/* Mobile Top Drag Handle Pill */}
+          <div className="w-12 h-1.5 bg-gray-500/80 rounded-full mx-auto my-2.5 shrink-0 md:hidden z-50 cursor-grab active:cursor-grabbing touch-none"></div>
 
           {/* Top-Right Fixed X Button (48x48 Touch Target) */}
           <button 
@@ -142,7 +143,7 @@ export function PropertyModal({ property, onClose }: { property: any, onClose: (
                  </a>
                  <div className="flex gap-4">
                     <a 
-                      href={`https://wa.me/919810098765?text=${encodeURIComponent(`Hello Gogia Group, I am interested in: ${property.title} (${property.location}) - ${property.price}`)}`}
+                      href={`https://wa.me/91XXXXXXXXXX?text=${encodeURIComponent(`Hello Gogia Group, I am interested in: ${property.title} (${property.location}) - ${property.price}`)}`}
                       target="_blank"
                       rel="noopener noreferrer"
                       className="w-full bg-[#25D366] text-white font-semibold py-4 text-[11px] uppercase tracking-[0.2em] flex justify-center items-center gap-2 hover:bg-[#20ba5a] transition-colors duration-300 rounded-[2px] shadow-lg text-center"
@@ -165,7 +166,7 @@ export function PropertyModal({ property, onClose }: { property: any, onClose: (
               BOOK A SITE VISIT
             </a>
             <a 
-              href={`https://wa.me/919810098765?text=${encodeURIComponent(`Hello Gogia Group, I am interested in: ${property.title} (${property.location}) - ${property.price}`)}`}
+              href={`https://wa.me/91XXXXXXXXXX?text=${encodeURIComponent(`Hello Gogia Group, I am interested in: ${property.title} (${property.location}) - ${property.price}`)}`}
               target="_blank"
               rel="noopener noreferrer"
               className="w-[40%] h-full bg-[#25D366] text-white font-sans font-bold text-[10px] uppercase tracking-[0.15em] flex items-center justify-center gap-1.5 text-center px-2"

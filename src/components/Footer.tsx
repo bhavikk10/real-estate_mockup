@@ -81,16 +81,16 @@ export function Footer() {
               <h4 className="text-gold font-sans uppercase tracking-[0.2em] text-[10px] font-semibold mb-6">Headquarters</h4>
               <ul className="space-y-4 text-bone/70 font-sans font-light text-sm">
                 <li className="leading-relaxed">
-                  M-11, Greater Kailash Part 1,<br />
-                  New Delhi - 110048
+                  Prime Location, South Delhi<br />
+                  New Delhi - 1100XX
                 </li>
-                <li><a href="mailto:gogiagroup@gmail.com" className="hover:text-gold transition-colors">gogiagroup@gmail.com</a></li>
-                <li><a href="tel:+919810098765" className="hover:text-gold transition-colors">+91 98100 98765</a></li>
+                <li><a href="mailto:info@gogiagroup.com" className="hover:text-gold transition-colors">info@gogiagroup.com</a></li>
+                <li><a href="tel:+91XXXXXXXXXX" className="hover:text-gold transition-colors">+91 XXXXX XXXXX</a></li>
               </ul>
               
               <div className="flex gap-3 mt-8">
                 <a 
-                  href="https://wa.me/919810098765" 
+                  href="https://wa.me/91XXXXXXXXXX" 
                   target="_blank" 
                   rel="noopener noreferrer" 
                   className="w-10 h-10 border border-[#25D366]/40 text-[#25D366] flex items-center justify-center hover:bg-[#25D366] hover:text-white transition-all duration-300 rounded-[2px]"

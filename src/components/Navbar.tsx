@@ -1,5 +1,5 @@
 import { motion, useScroll, useMotionValueEvent, AnimatePresence } from "framer-motion";
-import { X, MessageCircle } from "lucide-react";
+import { X } from "lucide-react";
 import { useState } from "react";
 
 export function Navbar() {
@@ -32,10 +32,10 @@ export function Navbar() {
         } h-[56px] sm:h-auto sm:py-6`}
         initial={{ y: -100 }}
         animate={{ y: 0 }}
-        transition={{ duration: 1, ease: [0.22, 1, 0.36, 1] }}
+        transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
       >
         <div className="max-w-[1400px] mx-auto px-4 sm:px-8 lg:px-12 h-full flex items-center justify-between">
-          {/* Mobile Header (Fixed 56px: Hamburger Left, Logo Center, WhatsApp Right) */}
+          {/* Mobile Header (Fixed 56px: Hamburger Left, Logo Center, Empty Spacer Right) */}
           <div className="flex sm:hidden items-center justify-between w-full h-full">
             {/* Hamburger Button (48x48 Touch Target) */}
             <button
@@ -55,16 +55,8 @@ export function Navbar() {
               GOGIA<span className="text-gold italic font-light text-xl leading-none ml-1">group</span>
             </a>
 
-            {/* Right WhatsApp Trigger (48x48 Touch Target) */}
-            <a
-              href="https://wa.me/919810098765?text=Hello%20Gogia%20Group,%20I%20am%20interested%20in%20learning%20more%20about%20your%20South%20Delhi%20properties."
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="WhatsApp Gogia Group"
-              className="w-12 h-12 flex items-center justify-center -mr-2 text-[#25D366] active:scale-95 transition-transform"
-            >
-              <MessageCircle size={22} strokeWidth={2.5} />
-            </a>
+            {/* Empty Spacer to maintain exact center logo alignment */}
+            <div className="w-12 h-12 pointer-events-none -mr-2" aria-hidden="true" />
           </div>
 
           {/* Desktop Navigation */}
@@ -103,11 +95,11 @@ export function Navbar() {
       <AnimatePresence>
         {mobileMenuOpen && (
           <motion.div
-            className="fixed inset-0 bg-[#0A0A0A] z-[100] flex flex-col justify-between p-6 sm:hidden overflow-y-auto"
+            className="fixed inset-0 bg-[#0A0A0A] z-[100] flex flex-col justify-between p-6 sm:hidden overflow-y-auto will-change-transform transform-gpu"
             initial={{ opacity: 0, y: "-100%" }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: "-100%" }}
-            transition={{ duration: 0.35, ease: [0.22, 1, 0.36, 1] }}
+            transition={{ duration: 0.35, ease: [0.16, 1, 0.3, 1] }}
           >
             {/* Drawer Header */}
             <div className="flex justify-between items-center h-[56px] border-b border-white/10 pb-4">
@@ -116,7 +108,7 @@ export function Navbar() {
               </span>
               <button
                 aria-label="Close menu"
-                className="w-12 h-12 flex items-center justify-center text-ivory/80 hover:text-ivory -mr-2"
+                className="w-12 h-12 flex items-center justify-center text-ivory/80 hover:text-ivory -mr-2 active:scale-90 transition-transform"
                 onClick={() => setMobileMenuOpen(false)}
               >
                 <X size={26} strokeWidth={1.5} />
@@ -135,10 +127,10 @@ export function Navbar() {
                   key={link.name}
                   href={link.href}
                   onClick={() => setMobileMenuOpen(false)}
-                  className="text-[24px] font-serif font-normal tracking-wider text-ivory hover:text-gold transition-colors block border-b border-white/5 pb-3"
+                  className="text-[24px] font-serif font-normal tracking-wider text-ivory hover:text-gold transition-colors block border-b border-white/5 pb-3 active:translate-x-1"
                   initial={{ opacity: 0, x: -15 }}
                   animate={{ opacity: 1, x: 0 }}
-                  transition={{ delay: 0.05 * i, duration: 0.2 }}
+                  transition={{ delay: 0.05 * i, duration: 0.3, ease: [0.16, 1, 0.3, 1] }}
                 >
                   {link.name}
                 </motion.a>
@@ -150,7 +142,7 @@ export function Navbar() {
               <a
                 href="#speak-with-us"
                 onClick={() => setMobileMenuOpen(false)}
-                className="w-full block text-center py-4 border border-gold text-gold font-sans text-xs uppercase tracking-[0.2em] font-semibold hover:bg-gold hover:text-charcoal transition-colors rounded-[2px]"
+                className="w-full block text-center py-4 border border-gold text-gold font-sans text-xs uppercase tracking-[0.2em] font-semibold hover:bg-gold hover:text-charcoal active:scale-[0.98] transition-all rounded-[2px]"
               >
                 PRIVATE ADVISORY
               </a>
