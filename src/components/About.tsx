@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 
 export function About() {
   return (
-    <section id="about" className="bg-charcoal py-32 border-b border-white/5 overflow-hidden">
+    <section id="about" className="bg-charcoal py-32 border-b border-charcoal-border overflow-hidden">
       <div className="max-w-[1400px] mx-auto px-6 md:px-12">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
           
@@ -33,7 +33,7 @@ export function About() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.3, ease: "easeOut" }}
               viewport={{ once: true }}
-              className="text-bone/80 mb-6 text-base lg:text-lg font-sans font-light leading-[1.8]"
+              className="text-bone mb-6 text-base lg:text-lg font-sans font-light leading-[1.8]"
             >
               Gogia Group was established to serve a singular purpose: to provide unparalleled real estate brokerage and advisory to South Delhi's most discerning families and investors. We do not just show properties; we curate legacy builder floors, expansive farmhouses, and prime land assets.
             </motion.p>
@@ -43,12 +43,12 @@ export function About() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.4, ease: "easeOut" }}
               viewport={{ once: true }}
-              className="text-bone/80 mb-12 text-base lg:text-lg font-sans font-light leading-[1.8]"
+              className="text-bone mb-12 text-base lg:text-lg font-sans font-light leading-[1.8]"
             >
               Our directors bring decades of local South Delhi expertise to private transactions, ensuring every builder floor and farmhouse deal is vetted with legal precision and executed with absolute discretion.
             </motion.p>
             
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 pt-10 border-t border-white/10">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 pt-10 border-t border-charcoal-border">
               {[
                 { title: "Local Intelligence", desc: "Deep micro-market knowledge" },
                 { title: "Owner Relationships", desc: "Direct access to legacy owners" },
@@ -75,7 +75,7 @@ export function About() {
               viewport={{ once: true }}
               className="mt-16"
             >
-              <img src="https://upload.wikimedia.org/wikipedia/commons/4/41/Signature_of_Founder.png" alt="Founder Signature" className="h-10 brightness-0 invert opacity-40 ml-1" />
+              <img src="https://upload.wikimedia.org/wikipedia/commons/4/41/Signature_of_Founder.png" alt="Founder Signature" className="h-10 dark:brightness-0 dark:invert opacity-60 ml-1" />
               <div className="text-gold text-[10px] font-sans uppercase tracking-[0.2em] mt-4 font-semibold">Managing Partners</div>
             </motion.div>
           </div>
@@ -86,9 +86,9 @@ export function About() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 1.2, ease: [0.25, 0.1, 0.25, 1] }}
               viewport={{ once: true }}
-              className="relative aspect-[3/4] overflow-hidden w-full max-w-md mx-auto lg:ml-auto p-3 border border-white/5 bg-[#0f0f0f]"
+              className="relative aspect-[3/4] overflow-hidden w-full max-w-md mx-auto lg:ml-auto p-3 border border-charcoal-border bg-charcoal-light shadow-md"
             >
-              <div className="absolute inset-0 bg-charcoal/10 hover:bg-transparent transition-colors duration-1000 z-10" />
+              <div className="absolute inset-0 bg-black/10 hover:bg-transparent transition-colors duration-1000 z-10" />
               <img 
                 src="https://images.unsplash.com/photo-1556157382-97eda2d62296?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
                 alt="Founders" 

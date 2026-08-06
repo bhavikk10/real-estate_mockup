@@ -54,11 +54,11 @@ export function FloatingElements() {
       </div>
 
       {/* Mobile Right-Edge Floating Sidebar (Logos Only, No Text) */}
-      <div className="sm:hidden fixed right-0 top-1/2 -translate-y-1/2 z-50 flex flex-col gap-2 p-1.5 bg-[#0F0F0F]/90 border-l border-y border-white/20 rounded-l-xl shadow-[0_4px_25px_rgba(0,0,0,0.8)] backdrop-blur-md">
+      <div className="sm:hidden fixed right-0 top-1/2 -translate-y-1/2 z-50 flex flex-col gap-2 p-1.5 bg-charcoal-light/90 border-l border-y border-charcoal-border rounded-l-xl shadow-card backdrop-blur-md">
         {/* Call Button */}
         <a 
           href="tel:+91XXXXXXXXXX"
-          className="w-10 h-10 rounded-lg bg-black/40 border border-gold/50 flex items-center justify-center text-gold active:scale-90 transition-transform shadow-md"
+          className="w-10 h-10 rounded-lg bg-charcoal border border-gold/50 flex items-center justify-center text-gold active:scale-90 transition-transform shadow-sm"
           aria-label="Call Gogia Group"
         >
           <Phone size={18} />
@@ -69,7 +69,7 @@ export function FloatingElements() {
           href="https://wa.me/91XXXXXXXXXX?text=Hello%20Gogia%20Group,%20I%20would%20like%20to%20inquire%20about%20your%20properties."
           target="_blank"
           rel="noopener noreferrer"
-          className="w-10 h-10 rounded-lg bg-black/40 border border-[#25D366]/60 flex items-center justify-center text-[#25D366] active:scale-90 transition-transform shadow-md"
+          className="w-10 h-10 rounded-lg bg-charcoal border border-[#1EA952]/60 flex items-center justify-center text-[#1EA952] active:scale-90 transition-transform shadow-sm"
           aria-label="WhatsApp Gogia Group"
         >
           <MessageCircle size={19} strokeWidth={2.2} />
@@ -80,7 +80,7 @@ export function FloatingElements() {
           href="https://instagram.com"
           target="_blank"
           rel="noopener noreferrer"
-          className="w-10 h-10 rounded-lg bg-black/40 border border-pink-500/50 flex items-center justify-center text-pink-400 active:scale-90 transition-transform shadow-md"
+          className="w-10 h-10 rounded-lg bg-charcoal border border-pink-500/50 flex items-center justify-center text-pink-500 active:scale-90 transition-transform shadow-sm"
           aria-label="Gogia Group Instagram"
         >
           <Instagram size={18} />

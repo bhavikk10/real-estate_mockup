@@ -66,7 +66,7 @@ export function Services() {
     <section 
       id="services" 
       ref={scrollRef} 
-      className="bg-[#0D0D0D] py-16 sm:py-32 relative overflow-hidden text-ivory border-b border-white/10"
+      className="bg-charcoal py-16 sm:py-32 relative overflow-hidden text-ivory border-b border-charcoal-border"
     >
       {/* Background Subtle Accent Glow */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-gold/5 blur-[140px] rounded-full pointer-events-none" />
@@ -103,8 +103,8 @@ export function Services() {
                 }}
                 className={`min-h-[38px] sm:min-h-[42px] px-3.5 sm:px-4 py-2 text-[10px] sm:text-[11px] font-sans font-semibold uppercase tracking-[0.15em] sm:tracking-[0.18em] rounded-[2px] transition-all duration-300 border active:scale-95 sm:hover:scale-[1.02] transform-gpu touch-manipulation flex items-center justify-center ${
                   activeTab === tab.value 
-                    ? "bg-gold text-charcoal border-gold shadow-[0_0_20px_rgba(212,175,55,0.35)] font-bold" 
-                    : "bg-white/5 text-bone/70 border-white/10 hover:border-gold/50 hover:text-ivory"
+                    ? "bg-gold text-charcoal border-gold shadow-md font-bold" 
+                    : "bg-charcoal-light text-bone border-charcoal-border hover:border-gold hover:text-ivory"
                 }`}
               >
                 {tab.label}
@@ -134,28 +134,28 @@ export function Services() {
                       window.navigator.vibrate(8);
                     }
                   }}
-                  className={`group relative p-4 sm:p-8 rounded-[2px] border cursor-pointer transition-colors duration-300 flex flex-col justify-between overflow-hidden will-change-transform transform-gpu touch-manipulation ${
+                  className={`group relative p-4 sm:p-8 rounded-[2px] border cursor-pointer transition-all duration-300 flex flex-col justify-between overflow-hidden will-change-transform transform-gpu touch-manipulation ${
                     isSelected 
-                      ? "bg-charcoal-light/95 border-gold shadow-[0_8px_35px_rgba(212,175,55,0.2)]" 
-                      : "bg-[#141414]/90 border-white/10 hover:border-gold/60 hover:bg-[#1A1A1A] hover:shadow-[0_10px_30px_rgba(0,0,0,0.5)]"
+                      ? "bg-charcoal-light border-gold shadow-card-hover" 
+                      : "bg-charcoal-light border-charcoal-border hover:border-gold shadow-card hover:shadow-card-hover"
                   }`}
                 >
                   {/* Top Border Glow Accent */}
-                  <div className={`absolute top-0 left-0 right-0 h-[2px] transition-all duration-300 ${isSelected ? "bg-gold shadow-[0_0_12px_#D4AF37]" : "bg-transparent group-hover:bg-gold/60"}`} />
+                  <div className={`absolute top-0 left-0 right-0 h-[2px] transition-all duration-300 ${isSelected ? "bg-gold shadow-sm" : "bg-transparent group-hover:bg-gold"}`} />
 
                   <div>
                     <div className="flex items-center justify-between mb-3 sm:mb-5">
-                      <div className={`p-2.5 sm:p-3 rounded-[2px] transition-all duration-300 ${isSelected ? "bg-gold text-charcoal shadow-md" : "bg-white/5 text-gold group-hover:bg-gold group-hover:text-charcoal"}`}>
+                      <div className={`p-2.5 sm:p-3 rounded-[2px] transition-all duration-300 ${isSelected ? "bg-gold text-charcoal shadow-md" : "bg-charcoal border border-charcoal-border text-gold group-hover:bg-gold group-hover:text-charcoal"}`}>
                         {service.icon}
                       </div>
-                      <ArrowUpRight size={18} className={`transition-all duration-300 ${isSelected ? "text-gold rotate-45 scale-110" : "text-white/30 group-hover:text-gold group-hover:translate-x-0.5 group-hover:-translate-y-0.5"}`} />
+                      <ArrowUpRight size={18} className={`transition-all duration-300 ${isSelected ? "text-gold rotate-45 scale-110" : "text-muted group-hover:text-gold group-hover:translate-x-0.5 group-hover:-translate-y-0.5"}`} />
                     </div>
 
                     <h4 className="text-sm sm:text-xl font-serif text-ivory font-medium mb-1.5 sm:mb-2.5 leading-snug group-hover:text-gold transition-colors">
                       {service.title}
                     </h4>
                     
-                    <p className="text-bone/70 text-[11px] sm:text-sm font-sans font-light leading-relaxed mb-3 sm:mb-4 line-clamp-3 sm:line-clamp-none">
+                    <p className="text-bone text-[11px] sm:text-sm font-sans font-light leading-relaxed mb-3 sm:mb-4 line-clamp-3 sm:line-clamp-none">
                       {service.desc}
                     </p>
                   </div>
@@ -170,11 +170,11 @@ export function Services() {
                     transition={{ duration: 0.3, ease: [0.16, 1, 0.3, 1] }}
                     className="overflow-hidden"
                   >
-                    <div className="pt-3.5 border-t border-white/10 mt-1">
+                    <div className="pt-3.5 border-t border-charcoal-border mt-1">
                       <div className="text-[9px] sm:text-[10px] uppercase tracking-widest text-gold font-semibold mb-2">Key Scope:</div>
                       <ul className="space-y-1.5">
                         {service.deliverables.map((item, idx) => (
-                          <li key={idx} className="flex items-center gap-2 text-[10px] sm:text-[12px] text-bone/85 font-sans">
+                          <li key={idx} className="flex items-center gap-2 text-[10px] sm:text-[12px] text-bone font-sans">
                             <CheckCircle2 size={12} className="text-gold shrink-0" />
                             <span>{item}</span>
                           </li>

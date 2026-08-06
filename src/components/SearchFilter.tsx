@@ -4,7 +4,7 @@ export function SearchFilter() {
   return (
     <section className="bg-charcoal py-8 border-b border-charcoal-border">
       <div className="max-w-[1400px] mx-auto px-6 md:px-12">
-        <div className="bg-charcoal-light border border-white/5 p-4 shadow-xl flex flex-col md:flex-row items-center gap-4 relative z-30">
+        <div className="bg-charcoal-light border border-charcoal-border p-4 shadow-card rounded-[2px] flex flex-col md:flex-row items-center gap-4 relative z-30">
           
           <div className="flex-1 w-full flex flex-col md:flex-row gap-6">
             <div className="flex-1 border-b md:border-b-0 md:border-r border-charcoal-border pb-4 md:pb-0 md:pr-4 relative group">

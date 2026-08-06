@@ -104,16 +104,16 @@ export function Hero({ onOpenModal }: { onOpenModal?: (property: any) => void })
             transition={{ duration: 1, delay: 1, ease: [0.22, 1, 0.36, 1] }}
           >
             <a 
-              href="#speak-with-us" 
-              className="bg-gold text-charcoal px-8 py-5 text-[10px] font-bold uppercase tracking-[0.2em] text-center hover:bg-ivory transition-colors duration-500 relative overflow-hidden active:scale-[0.98] border border-gold"
-            >
-              REQUEST A CALLBACK
-            </a>
-            <a 
               href="#properties" 
-              className="bg-charcoal/60 backdrop-blur-xl border border-white/20 text-ivory px-8 py-5 text-[10px] font-bold uppercase tracking-[0.2em] text-center hover:bg-white/10 transition-colors duration-500 active:scale-[0.98]"
+              className="bg-ivory text-charcoal px-8 py-5 text-[10px] font-bold uppercase tracking-[0.2em] text-center hover:bg-gold transition-colors duration-300 relative overflow-hidden active:scale-[0.98] border border-ivory shadow-md"
             >
               VIEW PROPERTIES
+            </a>
+            <a 
+              href="#speak-with-us" 
+              className="bg-transparent border border-ivory text-ivory px-8 py-5 text-[10px] font-bold uppercase tracking-[0.2em] text-center hover:bg-ivory hover:text-charcoal transition-colors duration-300 active:scale-[0.98]"
+            >
+              REQUEST A CALLBACK
             </a>
           </motion.div>
         </div>
@@ -127,11 +127,11 @@ export function Hero({ onOpenModal }: { onOpenModal?: (property: any) => void })
             transition={{ duration: 1, delay: 0.8 }}
             className="w-full"
           >
-            <Tilt tiltMaxAngleX={6} tiltMaxAngleY={6} scale={1.02} transitionSpeed={2500} className="p-6 border border-white/10 bg-charcoal/40 backdrop-blur-2xl relative overflow-hidden group hover:border-gold/30 transition-colors duration-500 block">
+            <Tilt tiltMaxAngleX={6} tiltMaxAngleY={6} scale={1.02} transitionSpeed={2500} className="p-6 border border-charcoal-border bg-charcoal-light/95 backdrop-blur-2xl relative overflow-hidden group hover:border-gold/50 transition-colors duration-500 block rounded-[2px] shadow-md">
               <div className="absolute top-0 right-0 p-4 opacity-20 group-hover:opacity-100 transition-opacity z-10 pointer-events-none">
                 <Building2 className="text-gold" size={40} strokeWidth={1} />
               </div>
-              <div className="text-gold text-[10px] uppercase tracking-[0.2em] mb-4 relative z-10">Featured Asset</div>
+              <div className="text-gold text-[10px] uppercase tracking-[0.2em] mb-4 relative z-10 font-semibold">Featured Asset</div>
               
               <div className="w-full h-auto relative mb-0 overflow-hidden group cursor-pointer border-0">
                  <Swiper
@@ -163,12 +163,12 @@ export function Hero({ onOpenModal }: { onOpenModal?: (property: any) => void })
                         gallery: [asset.img]
                       })}
                     >
-                      <div className="w-full h-32 relative mb-4 overflow-hidden border border-white/5 shrink-0 bg-[#0A0A0A]">
+                      <div className="w-full h-32 relative mb-4 overflow-hidden border border-charcoal-border shrink-0 bg-charcoal">
                         <img src={asset.img} alt={asset.title} className="w-full h-full object-cover grayscale-[20%] group-hover:scale-105 transition-transform duration-700" />
                       </div>
                       <div className="flex flex-col h-12 bg-transparent shrink-0">
                         <h3 className="font-serif text-ivory text-xl mb-1 truncate drop-shadow-md">{asset.title}</h3>
-                        <p className="text-muted text-xs truncate drop-shadow-sm">{asset.price}</p>
+                        <p className="text-gold font-bold text-xs truncate drop-shadow-sm">{asset.price}</p>
                       </div>
                     </SwiperSlide>
                   ))}
@@ -183,13 +183,13 @@ export function Hero({ onOpenModal }: { onOpenModal?: (property: any) => void })
             transition={{ duration: 1, delay: 0.9 }}
             className="w-full"
           >
-            <Tilt tiltMaxAngleX={6} tiltMaxAngleY={6} scale={1.02} transitionSpeed={2500} className="p-6 border border-white/10 bg-charcoal/40 backdrop-blur-xl flex items-start gap-4">
-              <div className="w-10 h-10 border border-gold/30 flex items-center justify-center shrink-0">
+            <Tilt tiltMaxAngleX={6} tiltMaxAngleY={6} scale={1.02} transitionSpeed={2500} className="p-6 border border-charcoal-border bg-charcoal-light/95 backdrop-blur-xl flex items-start gap-4 rounded-[2px] shadow-md">
+              <div className="w-10 h-10 border border-gold/40 flex items-center justify-center shrink-0 rounded-[2px]">
                  <TrendingUp className="text-gold" size={18} />
               </div>
               <div>
                  <div className="text-xs text-ivory font-medium mb-1">Market Insight</div>
-                 <div className="text-[10px] text-muted leading-relaxed">South Delhi Builder Floors ↑ 12% YoY</div>
+                 <div className="text-[10px] text-bone leading-relaxed">South Delhi Builder Floors <span className="text-gold font-bold">↑ 12% YoY</span></div>
               </div>
             </Tilt>
           </motion.div>
@@ -218,23 +218,23 @@ export function Hero({ onOpenModal }: { onOpenModal?: (property: any) => void })
               Builder Floors · Farmhouses · Golf Course Residences
             </p>
 
-            <div className="flex flex-col gap-3 w-full mb-6 mt-7">
+            <div className="flex flex-col gap-3 w-full mb-6 mt-[15vh]">
               <a 
                 href="#properties" 
-                className="w-full h-[52px] bg-white text-black font-sans font-bold text-xs uppercase tracking-[0.2em] flex items-center justify-center active:bg-gray-200 transition-colors rounded-[2px]"
+                className="w-full h-[52px] bg-ivory text-charcoal font-sans font-bold text-xs uppercase tracking-[0.2em] flex items-center justify-center active:scale-[0.98] transition-colors rounded-[2px] shadow-md hover:bg-gold"
               >
                 VIEW PROPERTIES
               </a>
               <a 
                 href="#speak-with-us" 
-                className="w-full h-[52px] bg-transparent border border-white text-white font-sans font-bold text-xs uppercase tracking-[0.2em] flex items-center justify-center active:bg-white/10 transition-colors rounded-[2px]"
+                className="w-full h-[52px] bg-transparent border border-ivory text-ivory font-sans font-bold text-xs uppercase tracking-[0.2em] flex items-center justify-center active:bg-ivory/10 transition-colors rounded-[2px]"
               >
                 REQUEST A CALLBACK
               </a>
             </div>
 
             {/* Featured Property Widget (Full Width Swipeable Card) */}
-            <div className="w-full border border-white/10 bg-[#111111]/90 shadow-2xl backdrop-blur-xl rounded-[4px] overflow-hidden">
+            <div className="w-full border border-charcoal-border bg-charcoal-light/95 shadow-card backdrop-blur-xl rounded-[2px] overflow-hidden">
                <Swiper
                   modules={[Autoplay, EffectFade, Pagination]}
                   effect="fade"
@@ -245,9 +245,9 @@ export function Hero({ onOpenModal }: { onOpenModal?: (property: any) => void })
                   className="w-full h-full mobile-dossier-swiper"
                 >
                   {featuredHeroAssets.map((asset, idx) => (
-                    <SwiperSlide key={idx} className="bg-[#111111]">
+                    <SwiperSlide key={idx} className="bg-charcoal-light">
                       <div 
-                        className="p-3 flex gap-3.5 items-center cursor-pointer active:bg-white/5 transition-colors"
+                        className="p-3 flex gap-3.5 items-center cursor-pointer active:bg-charcoal/10 transition-colors"
                         onClick={() => onOpenModal && onOpenModal({
                           id: `hero-${idx}`,
                           title: asset.title,
@@ -265,7 +265,7 @@ export function Hero({ onOpenModal }: { onOpenModal?: (property: any) => void })
                           gallery: [asset.img]
                         })}
                       >
-                        <div className="w-[72px] h-[72px] shrink-0 overflow-hidden relative rounded-[2px]">
+                        <div className="w-[72px] h-[72px] shrink-0 overflow-hidden relative rounded-[2px] border border-charcoal-border bg-charcoal">
                            <img 
                              src={asset.img} 
                              alt={asset.title} 
@@ -275,11 +275,11 @@ export function Hero({ onOpenModal }: { onOpenModal?: (property: any) => void })
                         <div className="flex flex-col justify-center flex-1 min-w-0 pr-2">
                            <div className="text-gold text-[9px] uppercase tracking-[0.2em] font-semibold mb-0.5">Featured Asset</div>
                            <h3 className="font-serif text-ivory text-[14px] leading-tight mb-1 truncate">{asset.title}</h3>
-                           <div className="text-bone/60 text-[11px] truncate flex items-center gap-1">
+                           <div className="text-bone text-[11px] truncate flex items-center gap-1">
                              <MapPin size={10} className="text-gold" />
                              {asset.location}
                            </div>
-                           <div className="text-gold font-serif text-[13px] font-semibold mt-1">{asset.price}</div>
+                           <div className="text-gold font-serif text-[13px] font-bold mt-1">{asset.price}</div>
                         </div>
                       </div>
                     </SwiperSlide>

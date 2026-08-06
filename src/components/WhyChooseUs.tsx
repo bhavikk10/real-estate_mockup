@@ -24,14 +24,14 @@ export function WhyChooseUs() {
               <div className="absolute inset-0 bg-charcoal/20 mix-blend-overlay"></div>
               
               {/* Refined subtle border */}
-              <div className="absolute inset-6 border border-white/20 z-10 pointer-events-none"></div>
+              <div className="absolute inset-6 border border-charcoal-border z-10 pointer-events-none"></div>
             </div>
             
             {/* Overlay Card - More minimal */}
-            <div className="absolute -bottom-10 -right-4 lg:-right-12 bg-charcoal-light p-10 border border-white/5 shadow-2xl max-w-[280px] hidden md:block">
+            <div className="absolute -bottom-10 -right-4 lg:-right-12 bg-charcoal-light p-10 border border-charcoal-border shadow-card max-w-[280px] hidden md:block rounded-[2px]">
               <div className="text-5xl font-serif text-gold mb-3 leading-none">15<span className="text-3xl">+</span></div>
               <div className="text-[10px] font-sans uppercase tracking-[0.2em] text-ivory mb-4 font-semibold">Years of Mastery</div>
-              <p className="text-muted/80 text-sm font-sans font-light leading-relaxed">
+              <p className="text-bone text-sm font-sans font-light leading-relaxed">
                 Navigating complex transactions for Delhi's most demanding clientele with absolute discretion.
               </p>
             </div>
@@ -45,7 +45,7 @@ export function WhyChooseUs() {
             <h3 className="text-4xl md:text-5xl lg:text-6xl font-serif text-ivory mb-8 leading-[1.1] tracking-tight">
               A Private Advisory <br /> for High-Value Assets.
             </h3>
-            <p className="text-bone/80 mb-12 text-base lg:text-lg font-sans font-light leading-[1.8]">
+            <p className="text-bone mb-12 text-base lg:text-lg font-sans font-light leading-[1.8]">
               We operate differently than traditional brokerages. We prioritize deep client relationships, off-market deal flow, and analytical rigor to protect and grow our clients' wealth through real estate. No mass marketing, no noise.
             </p>
             
@@ -55,12 +55,12 @@ export function WhyChooseUs() {
                   <div className="w-5 h-5 rounded-full border border-gold flex items-center justify-center shrink-0 mt-0.5">
                      <Check className="text-gold" size={12} strokeWidth={2} />
                   </div>
-                  <span className="text-ivory/80 text-sm font-sans font-light leading-relaxed">{point}</span>
+                  <span className="text-ivory text-sm font-sans font-light leading-relaxed">{point}</span>
                 </div>
               ))}
             </div>
             
-            <button className="bg-transparent border border-white/20 text-ivory px-10 py-5 text-[11px] font-semibold uppercase tracking-[0.2em] hover:bg-gold hover:text-charcoal hover:border-gold transition-all duration-300">
+            <button className="bg-transparent border border-charcoal-border text-ivory px-10 py-5 text-[11px] font-semibold uppercase tracking-[0.2em] hover:bg-gold hover:text-charcoal hover:border-gold transition-all duration-300 rounded-[2px]">
               Speak to our Founders
             </button>
           </div>

@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 
 export function Neighborhoods() {
   return (
-    <section className="bg-charcoal py-32 border-b border-white/5">
+    <section className="bg-charcoal py-32 border-b border-charcoal-border">
       <div className="max-w-[1400px] mx-auto px-6 md:px-12">
         <div className="flex flex-col lg:flex-row gap-16 lg:gap-24 mb-20 items-end">
           <motion.div 
@@ -27,9 +27,9 @@ export function Neighborhoods() {
              whileInView={{ opacity: 1, y: 0 }}
              transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
              viewport={{ once: true }}
-             className="flex-1 pt-6 lg:border-l border-white/10 lg:pl-16"
+             className="flex-1 pt-6 lg:border-l border-charcoal-border lg:pl-16"
           >
-            <p className="text-bone/70 leading-[1.8] font-sans font-light text-base lg:text-lg mb-8 max-w-lg">
+            <p className="text-bone leading-[1.8] font-sans font-light text-base lg:text-lg mb-8 max-w-lg">
               Delhi NCR is vast. We specialize exclusively in the region's most prestigious and high-growth corridors. Each market requires distinct on-the-ground intelligence.
             </p>
             <a href="#" className="inline-flex items-center gap-3 text-gold hover:text-ivory transition-colors duration-300 text-[11px] font-sans uppercase tracking-[0.2em] font-semibold">
@@ -39,7 +39,7 @@ export function Neighborhoods() {
         </div>
 
         {/* Mobile 2x2 Grid Layout / Desktop Mosaic Grid */}
-        <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-3 md:gap-[1px] border-y md:border border-white/5 bg-transparent md:bg-white/5">
+        <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-3 md:gap-[1px] border-y md:border border-charcoal-border bg-transparent md:bg-charcoal-border">
           {locations.map((loc, idx) => {
             // Mosaic layout logic for desktop
             let colSpanClasses = "col-span-1 md:col-span-1 lg:col-span-1";
@@ -55,9 +55,9 @@ export function Neighborhoods() {
               transition={{ duration: 0.5, delay: idx * 0.1 }}
               viewport={{ once: true }}
               key={idx} 
-              className={`group relative ${colSpanClasses} ${heightClass} overflow-hidden cursor-pointer bg-charcoal rounded-[2px] shrink-0 border border-white/10 md:border-none`}
+              className={`group relative ${colSpanClasses} ${heightClass} overflow-hidden cursor-pointer bg-charcoal rounded-[2px] shrink-0 border border-charcoal-border md:border-none shadow-sm`}
             >
-              <div className="absolute inset-0 bg-charcoal/40 group-hover:bg-charcoal/10 transition-colors duration-500 z-10" />
+              <div className="absolute inset-0 bg-black/30 group-hover:bg-transparent transition-colors duration-500 z-10" />
               
               <img 
                 src={loc.image} 

@@ -4,6 +4,7 @@
  */
 
 import { useState } from "react";
+import { ThemeProvider } from "./context/ThemeContext";
 import { Navbar } from "./components/Navbar";
 import { Hero } from "./components/Hero";
 import { FeaturedProperties } from "./components/FeaturedProperties";
@@ -22,26 +23,28 @@ export default function App() {
   const [selectedProperty, setSelectedProperty] = useState<any>(null);
 
   return (
-    <main className="bg-charcoal min-h-screen text-ivory font-sans selection:bg-gold selection:text-charcoal bg-[#0A0A0A]">
-      <Navbar />
-      <Hero onOpenModal={(prop) => setSelectedProperty(prop)} />
-      <PrivateCollections onOpenModal={(prop) => setSelectedProperty(prop)} />
-      <FeaturedProperties onOpenModal={(prop) => setSelectedProperty(prop)} />
-      <Services />
-      <Neighborhoods />
-      <About />
-      <Testimonials />
-      <Contact />
-      <Footer />
-      <FloatingElements />
-      
-      {/* Absolute Modal positioned via Portal or fixed overlay */}
-      {selectedProperty && (
-        <PropertyModal 
-          property={selectedProperty} 
-          onClose={() => setSelectedProperty(null)} 
-        />
-      )}
-    </main>
+    <ThemeProvider>
+      <main className="bg-charcoal min-h-screen text-ivory font-sans selection:bg-gold selection:text-charcoal transition-colors duration-300">
+        <Navbar />
+        <Hero onOpenModal={(prop) => setSelectedProperty(prop)} />
+        <PrivateCollections onOpenModal={(prop) => setSelectedProperty(prop)} />
+        <FeaturedProperties onOpenModal={(prop) => setSelectedProperty(prop)} />
+        <Services />
+        <Neighborhoods />
+        <About />
+        <Testimonials />
+        <Contact />
+        <Footer />
+        <FloatingElements />
+        
+        {/* Absolute Modal positioned via Portal or fixed overlay */}
+        {selectedProperty && (
+          <PropertyModal 
+            property={selectedProperty} 
+            onClose={() => setSelectedProperty(null)} 
+          />
+        )}
+      </main>
+    </ThemeProvider>
   );
 }

@@ -28,7 +28,7 @@ export function PropertyModal({ property, onClose }: { property: any, onClose: (
         
         {/* Modal / Bottom Sheet Content */}
         <motion.div 
-          className="relative z-10 w-full h-[92vh] md:h-full mt-auto md:mt-0 bg-charcoal-light md:shadow-2xl flex flex-col md:flex-row overflow-hidden md:border border-white/10 rounded-t-3xl md:rounded-none will-change-transform transform-gpu"
+          className="relative z-10 w-full h-[92vh] md:h-full mt-auto md:mt-0 bg-charcoal-light md:shadow-2xl flex flex-col md:flex-row overflow-hidden md:border border-charcoal-border rounded-t-3xl md:rounded-none will-change-transform transform-gpu"
           initial={{ opacity: 0, y: "100%" }}
           animate={{ opacity: 1, y: 0 }}
           exit={{ opacity: 0, y: "100%" }}
@@ -44,13 +44,13 @@ export function PropertyModal({ property, onClose }: { property: any, onClose: (
           }}
         >
           {/* Mobile Top Drag Handle Pill */}
-          <div className="w-12 h-1.5 bg-gray-500/80 rounded-full mx-auto my-2.5 shrink-0 md:hidden z-50 cursor-grab active:cursor-grabbing touch-none"></div>
+          <div className="w-12 h-1.5 bg-gray-400/80 rounded-full mx-auto my-2.5 shrink-0 md:hidden z-50 cursor-grab active:cursor-grabbing touch-none"></div>
 
           {/* Top-Right Fixed X Button (48x48 Touch Target) */}
           <button 
             onClick={onClose}
             aria-label="Close modal"
-            className="absolute top-3 right-3 md:top-8 md:right-8 z-50 w-12 h-12 flex items-center justify-center bg-black/60 hover:bg-gold text-ivory hover:text-charcoal rounded-full backdrop-blur-md transition-all duration-300"
+            className="absolute top-3 right-3 md:top-8 md:right-8 z-50 w-12 h-12 flex items-center justify-center bg-black/60 hover:bg-gold text-white hover:text-charcoal rounded-full backdrop-blur-md transition-all duration-300"
           >
             <X size={22} strokeWidth={1.5} />
           </button>
@@ -62,10 +62,10 @@ export function PropertyModal({ property, onClose }: { property: any, onClose: (
               alt={property.title} 
               className="w-full h-full object-cover"
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-charcoal via-transparent to-transparent opacity-80 md:hidden" />
+            <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-80 md:hidden" />
             
             {/* Gallery Counter Top-Right */}
-            <div className="absolute top-4 left-4 bg-black/70 backdrop-blur-md text-ivory text-[11px] font-mono px-3 py-1 border border-white/10 rounded-[2px]">
+            <div className="absolute top-4 left-4 bg-black/75 backdrop-blur-md text-white text-[11px] font-mono px-3 py-1 border border-white/20 rounded-[2px]">
               1 / {property.gallery?.length || 1}
             </div>
           </div>
@@ -88,12 +88,12 @@ export function PropertyModal({ property, onClose }: { property: any, onClose: (
               </div>
               
               {/* Price: 28px bold serif */}
-              <div className="text-[28px] md:text-4xl text-gold font-serif font-bold mb-6 pb-6 border-b border-white/10">
+              <div className="text-[28px] md:text-4xl text-gold font-serif font-bold mb-6 pb-6 border-b border-charcoal-border">
                 {property.price}
               </div>
 
               {/* Specs: 2x2 GRID on ALL screen sizes */}
-              <div className="grid grid-cols-2 gap-3 mb-6 p-4 bg-white/5 border border-white/10 rounded-[2px]">
+              <div className="grid grid-cols-2 gap-3 mb-6 p-4 bg-charcoal border border-charcoal-border rounded-[2px]">
                  <div className="border-l-2 border-gold pl-3">
                     <div className="text-[9px] uppercase font-sans tracking-[0.15em] text-muted mb-0.5 font-medium">BEDS</div>
                     <div className="text-base font-serif text-ivory">{property.beds || 4} Bedrooms</div>
@@ -110,12 +110,12 @@ export function PropertyModal({ property, onClose }: { property: any, onClose: (
                     <div className="text-[9px] uppercase font-sans tracking-[0.15em] text-muted mb-0.5 font-medium">TYPE</div>
                     <div className="text-base font-serif text-ivory">{property.type || 'Private'}</div>
                  </div>
-              </div>
+               </div>
 
               {/* Description */}
               <div className="mb-6">
                  <h3 className="text-[11px] uppercase font-sans tracking-[0.2em] text-ivory mb-2 font-semibold">About Property</h3>
-                 <p className="text-bone/80 font-sans font-light leading-relaxed text-sm">
+                 <p className="text-bone font-sans font-light leading-relaxed text-sm">
                     {property.description}
                  </p>
               </div>
@@ -125,7 +125,7 @@ export function PropertyModal({ property, onClose }: { property: any, onClose: (
                  <h3 className="text-[11px] uppercase font-sans tracking-[0.2em] text-ivory mb-3 font-semibold">Amenities</h3>
                  <div className="flex overflow-x-auto gap-2 no-scrollbar py-1">
                    {Array.from(new Set([...(property.amenities || []), "Ready to Move", "Vastu Compliant", "Prime Location", "Negotiable"])).map((amenity: string, idx: number) => (
-                      <span key={idx} className="shrink-0 whitespace-nowrap bg-white/5 border border-white/10 text-gold text-xs px-3.5 py-1.5 font-sans font-medium rounded-[2px]">
+                      <span key={idx} className="shrink-0 whitespace-nowrap bg-charcoal border border-charcoal-border text-gold text-xs px-3.5 py-1.5 font-sans font-medium rounded-[2px]">
                          {amenity}
                       </span>
                    ))}
@@ -133,11 +133,11 @@ export function PropertyModal({ property, onClose }: { property: any, onClose: (
               </div>
 
               {/* Desktop CTAs */}
-              <div className="hidden md:flex flex-col gap-4 mt-auto pb-4 pt-8 border-t border-white/5">
+              <div className="hidden md:flex flex-col gap-4 mt-auto pb-4 pt-8 border-t border-charcoal-border">
                  <a 
                    href="#speak-with-us"
                    onClick={onClose}
-                   className="w-full bg-gold text-charcoal py-4 text-[11px] font-semibold uppercase tracking-[0.2em] flex justify-center items-center gap-3 hover:bg-ivory transition-colors duration-300 shadow-xl text-center"
+                   className="w-full bg-ivory text-charcoal py-4 text-[11px] font-semibold uppercase tracking-[0.2em] flex justify-center items-center gap-3 hover:bg-gold transition-colors duration-300 shadow-md text-center rounded-[2px]"
                  >
                     <CalendarCheck size={16} strokeWidth={2} /> Book a Site Visit
                  </a>
@@ -146,7 +146,7 @@ export function PropertyModal({ property, onClose }: { property: any, onClose: (
                       href={`https://wa.me/91XXXXXXXXXX?text=${encodeURIComponent(`Hello Gogia Group, I am interested in: ${property.title} (${property.location}) - ${property.price}`)}`}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="w-full bg-[#25D366] text-white font-semibold py-4 text-[11px] uppercase tracking-[0.2em] flex justify-center items-center gap-2 hover:bg-[#20ba5a] transition-colors duration-300 rounded-[2px] shadow-lg text-center"
+                      className="w-full bg-[#1EA952] text-white font-semibold py-4 text-[11px] uppercase tracking-[0.2em] flex justify-center items-center gap-2 hover:opacity-90 transition-opacity duration-300 rounded-[2px] shadow-md text-center"
                     >
                       <MessageCircle size={16} strokeWidth={2.5} /> WhatsApp Gogia Group
                     </a>
@@ -157,11 +157,11 @@ export function PropertyModal({ property, onClose }: { property: any, onClose: (
           </div>
 
           {/* Mobile STICKY FOOTER BAR pinned to bottom of sheet (60px) */}
-          <div className="md:hidden absolute bottom-0 left-0 right-0 h-[60px] bg-[#0A0A0A] border-t border-white/10 flex items-center z-50">
+          <div className="md:hidden absolute bottom-0 left-0 right-0 h-[60px] bg-charcoal border-t border-charcoal-border flex items-center z-50">
             <a 
               href="#speak-with-us"
               onClick={onClose}
-              className="w-[60%] h-full bg-gold text-charcoal font-sans font-bold text-[10px] uppercase tracking-[0.15em] flex items-center justify-center text-center px-2"
+              className="w-[60%] h-full bg-ivory text-charcoal font-sans font-bold text-[10px] uppercase tracking-[0.15em] flex items-center justify-center text-center px-2"
             >
               BOOK A SITE VISIT
             </a>
@@ -169,7 +169,7 @@ export function PropertyModal({ property, onClose }: { property: any, onClose: (
               href={`https://wa.me/91XXXXXXXXXX?text=${encodeURIComponent(`Hello Gogia Group, I am interested in: ${property.title} (${property.location}) - ${property.price}`)}`}
               target="_blank"
               rel="noopener noreferrer"
-              className="w-[40%] h-full bg-[#25D366] text-white font-sans font-bold text-[10px] uppercase tracking-[0.15em] flex items-center justify-center gap-1.5 text-center px-2"
+              className="w-[40%] h-full bg-[#1EA952] text-white font-sans font-bold text-[10px] uppercase tracking-[0.15em] flex items-center justify-center gap-1.5 text-center px-2"
             >
               <MessageCircle size={16} strokeWidth={2.5} /> WHATSAPP
             </a>

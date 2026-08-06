@@ -2,11 +2,11 @@ import { Instagram, Linkedin, Twitter, ArrowRight, MessageCircle } from "lucide-
 
 export function Footer() {
   return (
-    <footer className="bg-charcoal pt-16 sm:pt-32 pb-12 relative z-10 overflow-hidden border-t border-white/5">
+    <footer className="bg-charcoal pt-16 sm:pt-32 pb-12 relative z-10 overflow-hidden border-t border-charcoal-border">
       
       {/* Huge Background Typography */}
-      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full overflow-hidden flex justify-center pointer-events-none select-none opacity-[0.02]">
-        <div className="text-[20vw] font-serif font-black text-white leading-none whitespace-nowrap tracking-tighter">
+      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full overflow-hidden flex justify-center pointer-events-none select-none opacity-[0.03]">
+        <div className="text-[20vw] font-serif font-black text-ivory leading-none whitespace-nowrap tracking-tighter">
           GOGIA GROUP
         </div>
       </div>
@@ -19,21 +19,21 @@ export function Footer() {
               <a href="#" className="text-2xl font-serif text-ivory tracking-[0.15em] uppercase flex items-center gap-1 mb-8">
                 GOGIA<span className="text-gold italic font-light lowercase text-3xl leading-none -mt-1 ml-1.5">group</span>
               </a>
-              <p className="text-bone/70 text-base font-sans font-light leading-relaxed mb-8 max-w-md">
+              <p className="text-bone text-base font-sans font-light leading-relaxed mb-8 max-w-md">
                 South Delhi’s most trusted real estate advisory for independent builder floors, farmhouses, and prime residential acquisitions across Delhi NCR.
               </p>
-              <div className="inline-block bg-white/5 border border-gold/30 px-4 py-2 text-[10px] uppercase tracking-[0.2em] text-gold font-mono mb-8">
+              <div className="inline-block bg-charcoal-light border border-gold/40 px-4 py-2 text-[10px] uppercase tracking-[0.2em] text-gold font-mono mb-8 rounded-[2px]">
                 RERA Reg. No. DLRERA2024A0012847
               </div>
             </div>
             
             <div className="mt-auto">
               <div className="text-[9px] uppercase tracking-[0.2em] text-gold mb-3 font-semibold">Private Portfolio Updates</div>
-              <div className="flex border-b border-white/20 pb-2 max-w-md group">
+              <div className="flex border-b border-charcoal-border pb-2 max-w-md group">
                 <input 
                   type="email" 
                   placeholder="Enter your phone or email" 
-                  className="bg-transparent text-ivory text-sm font-sans w-full outline-none placeholder:text-muted/50"
+                  className="bg-transparent text-ivory text-sm font-sans w-full outline-none placeholder:text-muted"
                 />
                 <button className="text-gold group-hover:text-ivory transition-colors">
                   <ArrowRight size={18} />
@@ -54,7 +54,7 @@ export function Footer() {
                   { name: 'Private Advisory', href: '#speak-with-us' },
                 ].map(link => (
                   <li key={link.name}>
-                    <a href={link.href} className="text-bone/70 hover:text-gold transition-colors font-sans font-light text-sm flex items-center gap-2 group">
+                    <a href={link.href} className="text-bone hover:text-gold transition-colors font-sans font-light text-sm flex items-center gap-2 group">
                       <span className="w-0 h-[1px] bg-gold group-hover:w-3 transition-all duration-300"></span>
                       {link.name}
                     </a>
@@ -68,7 +68,7 @@ export function Footer() {
               <ul className="space-y-4">
                 {['Greater Kailash I & II', 'Panchsheel Park', 'Vasant Vihar', 'Golf Links & Jor Bagh', 'Chattarpur Farms', 'Golf Course Road'].map(loc => (
                   <li key={loc}>
-                    <a href="#locations" className="text-bone/70 hover:text-gold transition-colors font-sans font-light text-sm flex items-center gap-2 group">
+                    <a href="#locations" className="text-bone hover:text-gold transition-colors font-sans font-light text-sm flex items-center gap-2 group">
                       <span className="w-0 h-[1px] bg-gold group-hover:w-3 transition-all duration-300"></span>
                       {loc}
                     </a>
@@ -79,7 +79,7 @@ export function Footer() {
 
             <div>
               <h4 className="text-gold font-sans uppercase tracking-[0.2em] text-[10px] font-semibold mb-6">Headquarters</h4>
-              <ul className="space-y-4 text-bone/70 font-sans font-light text-sm">
+              <ul className="space-y-4 text-bone font-sans font-light text-sm">
                 <li className="leading-relaxed">
                   Prime Location, South Delhi<br />
                   New Delhi - 1100XX
@@ -93,15 +93,15 @@ export function Footer() {
                   href="https://wa.me/91XXXXXXXXXX" 
                   target="_blank" 
                   rel="noopener noreferrer" 
-                  className="w-10 h-10 border border-[#25D366]/40 text-[#25D366] flex items-center justify-center hover:bg-[#25D366] hover:text-white transition-all duration-300 rounded-[2px]"
+                  className="w-10 h-10 border border-[#1EA952]/50 text-[#1EA952] flex items-center justify-center hover:bg-[#1EA952] hover:text-white transition-all duration-300 rounded-[2px]"
                   title="WhatsApp Gogia Group"
                 >
                   <MessageCircle size={16} />
                 </a>
-                <a href="#" className="w-10 h-10 border border-white/10 flex items-center justify-center text-ivory hover:border-gold hover:text-gold transition-all duration-300 rounded-[2px]">
+                <a href="#" className="w-10 h-10 border border-charcoal-border flex items-center justify-center text-ivory hover:border-gold hover:text-gold transition-all duration-300 rounded-[2px]">
                   <Linkedin size={14} />
                 </a>
-                <a href="#" className="w-10 h-10 border border-white/10 flex items-center justify-center text-ivory hover:border-gold hover:text-gold transition-all duration-300 rounded-[2px]">
+                <a href="#" className="w-10 h-10 border border-charcoal-border flex items-center justify-center text-ivory hover:border-gold hover:text-gold transition-all duration-300 rounded-[2px]">
                   <Instagram size={14} />
                 </a>
               </div>
@@ -109,11 +109,11 @@ export function Footer() {
           </div>
         </div>
         
-        <div className="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center gap-6">
-          <div className="text-muted/60 text-[10px] font-sans uppercase tracking-[0.2em] text-center md:text-left">
+        <div className="border-t border-charcoal-border pt-8 flex flex-col md:flex-row justify-between items-center gap-6">
+          <div className="text-muted text-[10px] font-sans uppercase tracking-[0.2em] text-center md:text-left">
             &copy; {new Date().getFullYear()} Gogia Group. All rights reserved. | RERA Reg. No. DLRERA2024A0012847
           </div>
-          <div className="flex flex-wrap justify-center gap-8 text-muted/60 text-[10px] font-sans uppercase tracking-[0.2em]">
+          <div className="flex flex-wrap justify-center gap-8 text-muted text-[10px] font-sans uppercase tracking-[0.2em]">
             <a href="#" className="hover:text-ivory transition-colors">Privacy Policy</a>
             <a href="#" className="hover:text-ivory transition-colors">Terms of Advisory</a>
             <a href="#" className="hover:text-ivory transition-colors">RERA Compliance</a>
