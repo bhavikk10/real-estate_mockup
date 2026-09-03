@@ -35,7 +35,7 @@ export function About() {
               viewport={{ once: true }}
               className="text-bone mb-6 text-base lg:text-lg font-sans font-light leading-[1.8]"
             >
-              Gogia Group was established to serve a singular purpose: to provide unparalleled real estate brokerage and advisory to South Delhi's most discerning families and investors. We do not just show properties; we curate legacy builder floors, expansive farmhouses, and prime land assets.
+              XYZ Group was established to serve a singular purpose: to provide unparalleled real estate brokerage and advisory to South Delhi's most discerning families and investors. We do not just show properties; we curate legacy builder floors, expansive farmhouses, and prime land assets.
             </motion.p>
             
             <motion.p 
