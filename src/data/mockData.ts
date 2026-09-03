@@ -180,7 +180,7 @@ export const locations = [
 
 export const testimonials = [
   {
-    quote: "The Gogia team found us our dream GK II floor in under 3 weeks. Extremely professional.",
+    quote: "The team found us our dream GK II floor in under 3 weeks. Extremely professional.",
     author: "Rajiv M.",
     title: "Buyer"
   },
