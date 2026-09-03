@@ -39,14 +39,14 @@ export function FloatingElements() {
         
         {/* Large Always Visible WhatsApp Floating Button (Desktop Only) */}
         <a 
-          href="https://wa.me/91XXXXXXXXXX?text=Hello%20Gogia%20Group,%20I%20am%20interested%20in%20learning%20more%20about%20your%20South%20Delhi%20properties."
+          href="https://wa.me/91XXXXXXXXXX?text=Hello%20XYZ%20Group,%20I%20am%20interested%20in%20learning%20more%20about%20your%20South%20Delhi%20properties."
           target="_blank"
           rel="noopener noreferrer"
           className="group relative flex items-center justify-center w-16 h-16 bg-[#25D366] text-white hover:bg-[#20ba5a] transition-all duration-300 shadow-[0_8px_30px_rgba(37,211,102,0.4)] rounded-full hover:scale-105 active:scale-95"
-          aria-label="Chat with Gogia Group on WhatsApp"
+          aria-label="Chat with XYZ Group on WhatsApp"
         >
           <span className="absolute right-full mr-4 whitespace-nowrap bg-charcoal/95 border border-white/10 text-ivory text-[11px] font-sans font-medium uppercase tracking-widest px-4 py-2.5 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none shadow-2xl rounded-[2px] hidden sm:block">
-            Chat with Gogia Group
+            Chat with XYZ Group
           </span>
           <MessageCircle size={30} strokeWidth={2.2} className="group-hover:rotate-12 transition-transform duration-300" />
           <span className="absolute -top-1 -right-1 w-4 h-4 bg-gold rounded-full border-2 border-charcoal animate-pulse"></span>
@@ -59,7 +59,7 @@ export function FloatingElements() {
         <a 
           href="tel:+91XXXXXXXXXX"
           className="w-10 h-10 rounded-lg bg-charcoal border border-gold/50 flex items-center justify-center text-gold active:scale-90 transition-transform shadow-sm"
-          aria-label="Call Gogia Group"
+          aria-label="Call XYZ Group"
         >
           <Phone size={18} />
         </a>
@@ -70,7 +70,7 @@ export function FloatingElements() {
           target="_blank"
           rel="noopener noreferrer"
           className="w-10 h-10 rounded-lg bg-charcoal border border-[#1EA952]/60 flex items-center justify-center text-[#1EA952] active:scale-90 transition-transform shadow-sm"
-          aria-label="WhatsApp Gogia Group"
+          aria-label="WhatsApp XYZ Group"
         >
           <MessageCircle size={19} strokeWidth={2.2} />
         </a>
@@ -81,7 +81,7 @@ export function FloatingElements() {
           target="_blank"
           rel="noopener noreferrer"
           className="w-10 h-10 rounded-lg bg-charcoal border border-pink-500/50 flex items-center justify-center text-pink-500 active:scale-90 transition-transform shadow-sm"
-          aria-label="Gogia Group Instagram"
+          aria-label="XYZ Group Instagram"
         >
           <Instagram size={18} />
         </a>
