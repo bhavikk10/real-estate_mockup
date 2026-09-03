@@ -54,7 +54,7 @@ export function Navbar() {
 
             {/* Center Logo */}
             <a href="#" className="text-base font-serif text-ivory tracking-[0.15em] uppercase flex items-center gap-1 cursor-pointer">
-              GOGIA<span className="text-gold italic font-light text-xl leading-none ml-1">group</span>
+              XYZ<span className="text-gold italic font-light text-xl leading-none ml-1">group</span>
             </a>
 
             {/* Right: Theme Toggle Icon (20x20px half-filled circle) */}
@@ -75,7 +75,7 @@ export function Navbar() {
           {/* Desktop Navigation */}
           <div className="hidden sm:flex items-center justify-between w-full">
             <a href="#" className="text-2xl font-serif text-ivory tracking-[0.15em] uppercase flex items-center gap-1 cursor-pointer relative z-10">
-              GOGIA<span className="text-gold italic font-light text-3xl leading-none -mt-1 ml-1.5">group</span>
+              XYZ<span className="text-gold italic font-light text-3xl leading-none -mt-1 ml-1.5">group</span>
             </a>
             <div className="flex items-center space-x-12">
               {navLinks.map((link) => (
@@ -131,7 +131,7 @@ export function Navbar() {
             {/* Drawer Header */}
             <div className="flex justify-between items-center h-[56px] border-b border-charcoal-border pb-4">
               <span className="text-base font-serif text-ivory tracking-[0.15em] uppercase">
-                GOGIA<span className="text-gold italic font-light text-xl leading-none ml-1">group</span>
+                XYZ<span className="text-gold italic font-light text-xl leading-none ml-1">group</span>
               </span>
               <div className="flex items-center gap-3">
                 <button
