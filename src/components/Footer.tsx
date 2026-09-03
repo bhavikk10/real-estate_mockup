@@ -7,7 +7,7 @@ export function Footer() {
       {/* Huge Background Typography */}
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full overflow-hidden flex justify-center pointer-events-none select-none opacity-[0.03]">
         <div className="text-[20vw] font-serif font-black text-ivory leading-none whitespace-nowrap tracking-tighter">
-          GOGIA GROUP
+          XYZ GROUP
         </div>
       </div>
 
@@ -17,7 +17,7 @@ export function Footer() {
           <div className="lg:col-span-5 pr-0 lg:pr-16 flex flex-col justify-between">
             <div>
               <a href="#" className="text-2xl font-serif text-ivory tracking-[0.15em] uppercase flex items-center gap-1 mb-8">
-                GOGIA<span className="text-gold italic font-light lowercase text-3xl leading-none -mt-1 ml-1.5">group</span>
+                XYZ<span className="text-gold italic font-light lowercase text-3xl leading-none -mt-1 ml-1.5">group</span>
               </a>
               <p className="text-bone text-base font-sans font-light leading-relaxed mb-8 max-w-md">
                 South Delhi’s most trusted real estate advisory for independent builder floors, farmhouses, and prime residential acquisitions across Delhi NCR.
